@@ -1,5 +1,4 @@
-<div>
-	{% for photo in project.photos %}
-  	<img src="../img/{{ photo }}">
-	{% endfor %}
-</div>
+
+{% for photo in project.photos %}
+  <div class="photo-frame"><img src="../img/{{ photo }}"></div>
+{% endfor %}

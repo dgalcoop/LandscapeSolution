@@ -5,8 +5,10 @@ layout: default
 
 
 <div class="hero">
-  <h1>The Landscape Solution</h1>
-  <h2>Professional Landscaping out of Floresville, Texas</h2>
+  <div class="heading">
+    <h1>The Landscape Solution</h1>
+    <h2>Professional Landscaping out of Floresville, Texas</h2>
+  </div>
 </div>
 <ul>
   <li>Gardens</li>
@@ -18,11 +20,11 @@ layout: default
   <li>Nightscaping</li>
 </ul>
 
-
-  <div class="projects-gallery">
-    {% for project in projectsGallery %}
-      {% include photo-list.html %}
-    {% endfor %}
+  <div class="carousel">
+    <div class="photos-gallery">
+      {% for project in projectsGallery %}
+        {% include photo-list.html %}
+      {% endfor %}
+    </div>
   </div>
-
 </div>
