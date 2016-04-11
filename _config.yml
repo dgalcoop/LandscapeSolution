@@ -9,7 +9,7 @@
 title: The Landscape Solution
 email: dflores.thelandscapesolution@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  We provide quality design services to the Wilson County area, specializing in new landscaping designs for residential and commercial properties.
+  We provide quality design services to the Wilson County area, specializing in new landscaping for residential and commercial properties.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
