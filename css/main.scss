@@ -11,7 +11,6 @@ $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
-
 $spacing-unit:     30px;
 
 $text-color:       #111;
@@ -50,32 +49,58 @@ $on-laptop:        800px;
         "base",
         "layout",
         "syntax-highlighting",
-        "susy";
+        "susy"
 ;
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
 
-$main-font: "Montserrat", Helvetica, Arial, sans-serif;
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Lato);
 
-$susy: (dd
+$droid-serif: 'Droid Serif', serif;
+$lato: 'Lato', sans-serif;
+
+$susy: (
     gutter-position: inside,
     columns: 16,
     gutters: 25px/50px,
     global-box-sizing: border-box // try this. if it messes with you, just comment out this line
 );
 
-body {
-	font-family: $main-font;
-}
+
+//HERO BANNER
 
 .hero {
-  height: calc(40vh);                                   // account for navbar height
+  height: calc(100vh);                                   // account for navbar height
   background-color: #192028;                                    // fallback color
   background-image: url('../img/photo8.jpg');
   background-size: cover;
   background-position: 50% 50%;                                 // changes based on your photo
   box-shadow: inset 0 0 0 1000px rgba(24,33,42,.60);            // secret sauce!!
   text-align: center;
-  padding-top: 200px;
+
+  .heading-info {
+
+  	.ls-logo {
+			font-size: 27px;
+			margin-left: 37px;
+		}
+		div, p {
+			display: inline-block;
+			font-size: 22px;
+			font-family: $lato;
+			font-weight: bold;
+			color: #3D3D3D;
+			float: left;
+		}
+		li {
+			display: inline-block;
+			font-size: 16px;
+			font-family: $lato;
+			font-weight: bold;
+			color: #3D3D3D;
+			margin: auto 10px;
+			float: right;
+		}
+	}
   h1 {
   	color: white;
   	font-size: 85px;
