@@ -59,16 +59,52 @@ $droid-serif: 'Droid Serif', serif;
 $lato: 'Lato', sans-serif;
 
 $susy: (
-    gutter-position: inside,
-    columns: 16,
-    gutters: 25px/50px,
-    global-box-sizing: border-box // try this. if it messes with you, just comment out this line
+		container: 100%,
+		columns: 16,
+		column-width: 50px,
+		gutters: 1/2,
+		gutter-position: inside
 );
 
+@mixin clearfix {
+	&:after {
+		content: " ";
+		display: block;
+		clear: both;
+	}
+}
+
+.grid {
+	@include layout($susy);
+	@include container(1175px);
+	@include clearfix;
+}
+
+.full-grid {
+	@include layout($susy);
+	@include container(100%);
+	@include clearfix;
+}
+
+//BUTTONS
+
+a.button, button {
+    // margin-top: 2rem;
+    background: none;
+    display: inline-block;
+    padding: 18px 12px 15px;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .075rem;
+    font-family: $lato;
+    text-decoration: none;
+    color: white;
+}
 
 //HERO BANNER
 
-.hero {
+div.hero {
   height: calc(100vh);                                   // account for navbar height
   background-color: #192028;                                    // fallback color
   background-image: url('../img/photo8.jpg');
@@ -78,38 +114,42 @@ $susy: (
   text-align: center;
   color: white;
  	overflow: hidden;
+ 	color: white;
+ 	text-align: center;
 
-  .heading-info {
-  	clear: both;
-  	.ls-logo {
-			font-size: 27px;
-			margin-left: 37px;
-		}
-		div, p {
-			display: inline-block;
+ 	.nav-menu {
+ 		height: 50px;
+
+		.logo-area {
+			@include span(9 of 16);
+			font-family: $lato;
 			font-size: 22px;
-			font-family: $lato;
-			font-weight: bold;
-			float: left;
+			text-align: left;
+			div {
+				display: inline-block;
+			}
+			.ls-logo {
+				font-size: 27px;
+			}
 		}
-		li {
-			display: inline-block;
-			font-size: 16px;
-			font-family: $lato;
-			font-weight: bold;
-			margin: auto 10px;
-			float: right;
+
+		.nav-area {
+			@include span(7 of 16);
+			margin-top: 10px;
+			text-align: right;
+			div {
+				display: inline-block;
+				margin: auto 9px;
+				font-family: $lato;
+				font-size: 16px;
+			}
 		}
 	}
+
   h1 {
-  	color: white;
-  	font-size: 85px;
-  }
-  h2 {
-  	color: white;
-  	font-size: 20px;
-		text-transform: uppercase;
-		word-spacing: 3px;
+  	font-family: $droid-serif;
+  	font-size: 52px;
+  	margin-top: 150px;
   }
 }
 
