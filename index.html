@@ -2,22 +2,43 @@
 layout: default
 ---
 {% assign projectsGallery = site.projects | where: "category", "featured" %}
-<div class="services">
-  <h2>Services</h2>
-  <ul>
-    <li>Gardens</li>
-    <li>Water Features</li>
-    <li>Stonework</li>
-    <li>Patios</li>
-    <li>Retaining Walls</li>
-    <li>Sodding</li>
-    <li>Nightscaping</li>
-    <li>Fire Pits</li>
-    <li>Drainage</li>
-    <li>Xeriscapting</li>
-  </ul>
+
+<div class="services grid">
+  <div class="services-description">
+    <h2>Our Services</h2>
+    <p>We offer year-round landscaping from stonework to fire pits to water features and gardens. Let us know what you have planned for your next home expansion and we can start a discussion about how to make it a dream come true. See our previous projects for some the the work we've done for the happy folk of Wilson County.</p>
+    <ul>
+      <div class="left-list">
+        <li>Gardens</li>
+        <li>Water Features</li>
+        <li>Stonework</li>
+        <li>Patios</li>
+        <li>Retaining Walls</li>
+      </div>
+      <div class="right-list">
+        <li>Sodding</li>
+        <li>Nightscaping</li>
+        <li>Fire Pits</li>
+        <li>Drainage</li>
+        <li>Xeriscaping</li>
+      </div>
+    </ul>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-quote">
+      <p>David is the best and professional and stuff. He knew what to do with the rocks &amp; grass.</p>
+    </div>
+    <div class="testimonial-citation">
+    <p><span class="testimonial-link">Testimonials</span><span class="testimonial-who">Agatha Myers from Ivalice</span></p>
+    </div>
+  </div>
 </div>
 
+
+
+<div class="project-gallery">
+  <h2>Project Gallery</h2>
   <div class="carousel">
     <div class="photos-gallery">
       {% for project in projectsGallery %}
@@ -26,3 +47,23 @@ layout: default
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

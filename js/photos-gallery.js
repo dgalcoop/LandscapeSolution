@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('.photos-gallery').slick({
-		dots: true,
 		infinite: true,
 		slidesToShow: 3,
 		speed: 1500,

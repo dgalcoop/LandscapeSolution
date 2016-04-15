@@ -61,7 +61,7 @@ $lato: 'Lato', sans-serif;
 $susy: (
 		container: 100%,
 		columns: 16,
-		column-width: 50px,
+		//column-width: 50px,
 		gutters: 1/2,
 		gutter-position: inside
 );
@@ -76,7 +76,8 @@ $susy: (
 
 .grid {
 	@include layout($susy);
-	@include container(1175px);
+	@include container(85%);
+	//@include container(1175px);
 	@include clearfix;
 }
 
@@ -92,7 +93,7 @@ a.button, button {
     // margin-top: 2rem;
     background: none;
     display: inline-block;
-    padding: 18px 12px 15px;
+    padding: 13px;
     border: 2px solid white;
     font-size: 1rem;
     font-weight: 500;
@@ -153,25 +154,70 @@ div.hero {
   }
 }
 
-.services {
-	text-align: center;
-	ul {
-		list-style-type: none;
-	}
+//SERVICES
 
+.services {
+	height: 637px;
+	background-color: white;
+
+	.services-description {
+		@include span(8 of 16);
+		margin-top: 101px;
+		font-family: $droid-serif;
+		h2 {
+			font-family: $lato;
+		}
+		ul {
+			margin: 0px;
+			padding: 0px;
+			list-style-type: none;
+			div {
+				@include span(8 of 16);
+				display: inline-block;
+			}
+		}
+	}
+	.testimonial {
+		@include span(8 of 16);
+		margin-top: 120px;
+		padding: 17px 37px 20px;
+		background-color: AliceBlue;
+		.testimonial-quote {
+			margin-top: 30px;
+			border-bottom: 2px solid gray;
+			font-family: $droid-serif;
+			font-size: 36px;
+			line-height: 46px;
+		}
+	}
+	.testimonial-citation {
+		margin-top: 17px;
+		.testimonial-link {
+			@include span (8 of 16);
+		}
+		.testimonial-who {
+			@include span(8 of 16);
+			text-align: right;
+		}
+	}
+}
+
+//PROJECT PHOTOS
+.project-gallery {
+	display: block;
+	width: 85%;
+	text-align: center;
 }
 
 .carousel {
 	position: relative;
-	margin: auto;
 	padding: 20px;
-	width: 90%;
-	background-color: gray;
+	margin: 0px auto;
 
 	.arrow {
 		position: absolute;
 		top: 47%;
-		padding: 3px 10x;
+		padding: 3px 10px;
 		cursor: pointer;
 		z-index: 1;
 	}
