@@ -26,28 +26,32 @@ layout: default
   </div>
 
   <div class="testimonial">
-    <div class="testimonial-quote">
-      <p>David is the best and professional and stuff. He knew what to do with the rocks &amp; grass.</p>
-    </div>
-    <div class="testimonial-citation">
-    <p><span class="testimonial-link">Testimonials</span><span class="testimonial-who">Agatha Myers from Ivalice</span></p>
-    </div>
-  </div>
-</div>
-
-
-
-<div class="project-gallery">
-  <h2>Project Gallery</h2>
-  <div class="carousel">
-    <div class="photos-gallery">
-      {% for project in projectsGallery %}
-        {% include photo-list.html %}
-      {% endfor %}
+    <div class="testimonial-box">
+      <div class="testimonial-quote">
+        <p>David is the best and professional and stuff. He knew what to do with the rocks &amp; grass.</p>
+      </div>
+      <div class="testimonial-citation">
+        <p><span class="testimonial-link">Testimonials</span><span class="testimonial-who">Agatha Myers from Ivalice</span></p>
+      </div>
     </div>
   </div>
 </div>
 
+
+
+<div class="grid">
+  <div class="project-gallery">
+    <h2>Project Gallery</h2>
+    
+    <div class="carousel">
+      <div class="photos-gallery">
+        {% for project in projectsGallery %}
+          {% include photo-list.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

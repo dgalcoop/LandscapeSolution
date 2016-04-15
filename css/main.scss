@@ -28,7 +28,6 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {
@@ -68,8 +67,8 @@ $susy: (
 
 @mixin clearfix {
 	&:after {
-		content: " ";
-		display: block;
+		content: "";
+		display: table;
 		clear: both;
 	}
 }
@@ -157,7 +156,7 @@ div.hero {
 //SERVICES
 
 .services {
-	height: 637px;
+  margin-bottom: 60px;
 	background-color: white;
 
 	.services-description {
@@ -180,8 +179,11 @@ div.hero {
 	.testimonial {
 		@include span(8 of 16);
 		margin-top: 120px;
-		padding: 17px 37px 20px;
-		background-color: AliceBlue;
+		
+    .testimonial-box {
+      padding: 17px 37px 20px;
+      background-color: AliceBlue;
+    }
 		.testimonial-quote {
 			margin-top: 30px;
 			border-bottom: 2px solid gray;
@@ -191,6 +193,8 @@ div.hero {
 		}
 	}
 	.testimonial-citation {
+    @include clearfix; 
+
 		margin-top: 17px;
 		.testimonial-link {
 			@include span (8 of 16);
@@ -204,14 +208,13 @@ div.hero {
 
 //PROJECT PHOTOS
 .project-gallery {
-	display: block;
-	width: 85%;
-	text-align: center;
+  @include span(16 of 16);
 }
 
 .carousel {
 	position: relative;
-	padding: 20px;
+	padding: 20px 0;
+  width: 100%;
 	margin: 0px auto;
 
 	.arrow {
@@ -227,6 +230,12 @@ div.hero {
 		font-size: 25px;
 	}
 
+  .slick-slide {
+    width: 400px;
+    margin: 0;
+    border-right: 10px solid #fff;
+  }
+
 	.carousel-prev {
 		left: -5px;
 	}
@@ -234,9 +243,6 @@ div.hero {
 	.carousel-next {
 		right: -5px;
 	}
-}
-
-.photos-gallery {
 }
 
 .photo-frame {
