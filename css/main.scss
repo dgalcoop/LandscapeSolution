@@ -319,16 +319,37 @@ div.hero {
 	}
 	.job-info {
 		@include span(8 of 16);
+		font-size: 18px;
+		p {
+			font-family: $lato;
+			font-weight: bold;
+			margin-top: 3px;
+			margin-bottom: 3px;
+		}
 		padding-top: 114px;
 		input {
 			width: 100%;
-			font-size: 18px;
+			border: 1px solid black;
 		}
 		textarea {
 			width: 100%;
 			height: 144px;
-			font-size: 18px;
 			resize: none;
+			margin-bottom: 30px;
+			border: 1px solid black;
+		}
+		.job-row {
+			@include span(16 of 16);
+		}
+		.job-half-row {
+			@include span(8 of 16);
+		}
+		.quote-button {
+			font-family: $lato;
+			font-weight: bold;
+			padding: 14px;
+			background-color: black;
+			color: white;
 		}
 	}
 }
