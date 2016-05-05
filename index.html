@@ -2,27 +2,144 @@
 layout: default
 ---
 {% assign projectsGallery = site.projects | where: "category", "featured" %}
-<div class="services">
-  <h2>Services</h2>
-  <ul>
-    <li>Gardens</li>
-    <li>Water Features</li>
-    <li>Stonework</li>
-    <li>Patios</li>
-    <li>Retaining Walls</li>
-    <li>Sodding</li>
-    <li>Nightscaping</li>
-    <li>Fire Pits</li>
-    <li>Drainage</li>
-    <li>Xeriscapting</li>
-  </ul>
-</div>
 
-  <div class="carousel">
-    <div class="photos-gallery">
-      {% for project in projectsGallery %}
-        {% include photo-list.html %}
-      {% endfor %}
+<div class="services grid">
+  <div class="services-description">
+    <h2>Our Services</h2>
+    <p>We offer year-round landscaping from stonework to fire pits to water features and gardens. Let us know what you have planned for your next home expansion and we can start a discussion about how to make it a dream come true. See our previous projects for some the the work we've done for the happy folk of Wilson County.</p>
+    <ul>
+      <div class="left-list">
+        <li>Gardens</li>
+        <li>Water Features</li>
+        <li>Stonework</li>
+        <li>Patios</li>
+        <li>Retaining Walls</li>
+      </div>
+      <div class="right-list">
+        <li>Sodding</li>
+        <li>Nightscaping</li>
+        <li>Fire Pits</li>
+        <li>Drainage</li>
+        <li>Xeriscaping</li>
+      </div>
+    </ul>
+  </div>
+
+  <div class="testimonial">
+    <div class="testimonial-box">
+      <div class="testimonial-quote">
+        <p>David is the best and professional and stuff. He knew what to do with the rocks &amp; grass.</p>
+      </div>
+      <div class="testimonial-citation">
+        <p><span class="testimonial-link">Testimonials</span><span class="testimonial-who">Agatha Myers from Ivalice</span></p>
+      </div>
     </div>
   </div>
 </div>
+
+<div class="grid">
+  <div class="project-gallery">
+    <h2>Project Gallery</h2>
+    <div class="carousel">
+      <div class="photos-gallery">
+        {% for project in projectsGallery %}
+          {% include photo-list.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-us">
+  <div class="grid">
+    <div class="family-photo">
+      <img src="#">
+      <p>Dana and David with their kids, Ashlyn, Rowan, and Nolan.</p>
+    </div>
+    <div class="about-us-description">
+      <h2>About Us</h2>
+      <p>David and his family live in Floresville, Texas. They grew up there, now they're forcing other people to grow up there.</p>
+      <p>Naw, but seriously. They're cute and all hella good at what they do. Contact them and see for yourself!</p>
+    </div>
+  </div>
+</div>
+
+<div class="quote-area">
+  <div class="grid">
+    <div class="contact-us">
+      <h2>Get a Quote</h2>
+      <p>Fill out our simple contact form or contact us directly using one of the methods below and we’ll get back to you as soon as possible. Thanks for taking an interest lorem ipsum.</p>
+
+      <div class="contact-bar">
+        <div class="contact-bullet">
+          <div><i class="fa fa-facebook-square"></i></div>
+        </div>
+        <div class="contact-content">
+          <h4>Facebook</h4>
+          <p>facebook.com/thelandscapesolution</p>
+        </div>
+      </div>
+
+      <div class="contact-bar">
+        <div class="contact-bullet">
+          <div><i class="fa fa-envelope"></i></div>
+        </div>
+        <div class="contact-content">
+          <h4>Email</h4>
+          <p>davidflores@thelandscapesolution.com</p>
+        </div>
+      </div>
+
+      <div class="contact-bar">
+        <div class="contact-bullet">
+          <div><i class="fa fa-phone-square"></i></div>
+        </div>
+        <div class="contact-content">
+          <h4>Phone Number</h4>
+          <p>555-XXX-55XX</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="job-info">
+
+      <div class="job-row">
+        <p>Name</p>
+        <input type="text"></input>
+      </div>
+
+      <div class="job-half-row">
+        <p>Email</p>
+        <input type="text"></input>
+      </div>
+
+      <div class="job-half-row">
+        <p>Phone Number</p>
+        <input type="text"></input>
+      </div>
+
+      <div class="job-textarea job-row">
+        <p>Project Details</p>
+        <textarea rows="4" cols="50"></textarea>
+      </div>
+
+      <a class="quote-button">Get a Quote</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
