@@ -107,7 +107,7 @@ a.button, button {
 div.hero {
   height: calc(100vh);                                   // account for navbar height
   background-color: #192028;                                    // fallback color
-  background-image: url('../img/photo8.jpg');
+  background-image: url('#');
   background-size: cover;
   background-position: 50% 50%;                                 // changes based on your photo
   box-shadow: inset 0 0 0 1000px rgba(24,33,42,.60);            // secret sauce!!
@@ -149,7 +149,7 @@ div.hero {
   h1 {
   	font-family: $droid-serif;
   	font-size: 52px;
-  	margin-top: 175px;
+  	margin-top: 185px;
   }
 }
 
@@ -158,7 +158,7 @@ div.hero {
 .services {
   margin-bottom: 60px;
 	background-color: white;
-
+  
 	.services-description {
 		@include span(8 of 16);
 		margin-top: 101px;

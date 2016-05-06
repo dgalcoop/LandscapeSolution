@@ -1,4 +1,4 @@
 
-{% for photo in project.photos %}
-  <div class="photo-frame"><img src="../img/{{ photo }}"></div>
+{% for item in project.gallery %}
+  <div class="photo-frame"><img src="{{ item.image_url }}"></div>
 {% endfor %}
